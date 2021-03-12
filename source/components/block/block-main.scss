@@ -1,0 +1,160 @@
+.block-main {
+    padding-top: 60px;
+    margin-bottom: 50px;
+
+
+    &__img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 290px;
+        width: 270px;
+        z-index: -1;
+        overflow: hidden;
+
+        &-picture {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        &::before {
+            position: absolute;
+            z-index: -5;
+            top: 0;
+            right: 0;
+            content: "";
+            width: 230px;
+            height: 230px;
+            background: url(../img/lines-sm.png) repeat;
+            transform: translate(10%, -30%) rotate(-45deg);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 50%);
+
+            animation: lines-go 4s linear infinite;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &__content {
+        margin-top: 170px;
+        margin-bottom: 60px;
+        max-width: 460px;
+
+        &-logo {
+            display: inline-block;
+            vertical-align: baseline;
+            width: 111px;
+            height: 37px;
+        }
+    }
+
+    &__btn-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+        align-items: flex-start;
+        max-width: 425px;
+    }
+}
+
+@keyframes lines-go {
+    0% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position-x: 60px;
+    }
+}
+
+
+@include media-to("md") {
+    .block-main {
+        padding-top: 90px;
+        margin-bottom: 80px;
+
+
+        &__content {
+            margin-top: 133px;
+            margin-bottom: 90px;
+            max-width: 510px;
+            padding-right: 30px;
+
+            &-logo {
+                width: 126px;
+                height: 41px;
+            }
+        }
+
+        &__btn-group {
+            column-gap: 20px;
+        }
+
+        &__img {
+            height: 470px;
+            width: 440px;
+
+            &::before {
+                width: 350px;
+                height: 350px;
+                animation-duration: 3s;
+                background: url(../img/lines-md.png) repeat;
+                transform: translate(4%, -30%) rotate(-45deg);
+            }
+        }
+    }
+
+    @keyframes lines-go {
+        0% {
+            background-position-x: 0%;
+        }
+
+        100% {
+            background-position-x: 95px;
+        }
+    }
+}
+
+@include media-to("lg") {
+    .block-main {
+        &__content {
+            margin-top: 57px;
+            margin-bottom: 110px;
+            padding-right: 0;
+
+            &__btn-group {
+                max-width: 440px;
+            }
+        }
+
+        &__img {
+            height: 800px;
+            width: 770px;
+
+            &::before {
+                width: 740px;
+                height: 570px;
+                animation-duration: 2s;
+                background: url(../img/lines-lg.png) repeat;
+                transform: translate(8%, -13%) rotate(-45deg);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 74%);
+            }
+        }
+
+        &__btn-group {
+            max-width: 440px;
+        }
+    }
+
+    @keyframes lines-go {
+        0% {
+            background-position-x: 0%;
+        }
+
+        100% {
+            background-position-x: 160px;
+        }
+    }
+}
+

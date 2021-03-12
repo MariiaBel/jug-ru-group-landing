@@ -1,0 +1,69 @@
+.form {
+    font-size: 0.917em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: map-get($colors, "dim");
+    margin: 0;
+
+    &__fieldset {
+        padding: 0;
+        border: 0;
+        display: grid;
+        grid-template-columns: 1fr min-content;
+        column-gap: 6px;
+        margin-bottom: 20px;
+        max-width: 505px;
+    }
+
+    & input[type=email] {
+        background-color: map-get($colors, "grey-field");
+        border: none;
+        border-radius: 7px;
+        padding: 1em 16px;
+
+        @extend .small;
+    }
+
+    &__subtext {
+        @extend .mini;
+        padding-right: 80px;
+        display: block;
+        max-width: 505px;
+    }
+}
+
+@include media-to("md") {
+    .form {
+        &__fieldset {
+            margin-left: auto;
+            margin-right: auto;
+            column-gap: 10px;
+        }
+
+        input[type="email"] {
+            padding: 15px 28px;
+        }
+
+        &__subtext {
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 270px;
+        }
+    }
+}
+
+@include media-to("lg") {
+    .form {
+        &__subtext {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__fieldset {
+
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+

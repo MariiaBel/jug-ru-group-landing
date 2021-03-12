@@ -1,0 +1,13 @@
+.no-js {
+    & .modal {
+        position: relative;
+        display: block;
+        top: 0;
+        height: auto;
+        width: auto;
+
+        &__link-return {
+            display: none;
+        }
+    }
+}

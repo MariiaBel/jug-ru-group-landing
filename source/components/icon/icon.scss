@@ -1,0 +1,62 @@
+.icon {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    &::before {
+        content: "";
+        position: relative;
+        width: 2.5em;
+        height: 2.5em;
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &--refuse {
+        &::before {
+            padding-right: 3em;
+            background-image: url("../img/emoji/tired-man.png");
+        }
+    }
+
+    &--accept {
+        &::before {
+            padding-right: 3em;
+            background-image: url("../img/emoji/welcome-man.png");
+        }
+    }
+
+    &--arrow-left {
+        &::before {
+            position: relative;
+            background-image: url("../img/arrow-left.svg");
+            height: 1.125em;
+        }
+    }
+}
+
+@include media-to("md") {
+    .icon {
+        &::before {
+            width: 2em;
+            height: 2.2em;
+        }
+
+        &--arrow-left::before {
+            height: 1.8em;
+        }
+    }
+}
+
+@include media-to("lg") {
+    .icon {
+        &--arrow-left::before {
+            height: 1.3em;
+            width: 1.3em;
+        }
+    }
+}
+

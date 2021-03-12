@@ -1,0 +1,14 @@
+extends components/layout.jade
+
+block title
+    title Франшиза сети магазинов по продаже металлоискателей | GPSOFF
+
+block meta
+    meta(name="description" content="Франшиза сети магазинов по продаже металлоискателей. Мы ищем партнера в Екатеренбурге.")
+
+block main
+    include ./components/block/block-main.jade
+
+    .wrapper
+        include ./components/modal/modal-accept.jade
+        include ./components/modal/modal-refuse.jade

@@ -1,0 +1,17 @@
+mixin picture(name, extension, width, height, alt) 
+    picture.picture
+        source(type="image/webp" 
+            media="(min-width: #{lg})"
+            srcset="img/#{name}-lg.webp 1x, img/#{name}-lg@2x.webp 2x")
+        source(type="image/webp" media="(min-width: #{md})"
+            srcset="img/#{name}-md.webp 1x, img/#{name}-md@2x.webp 2x")
+        source(type="image/webp" 
+            srcset="img/#{name}-sm.webp 1x, img/#{name}-sm@2x.webp 2x")
+
+        source(media="(min-width: #{lg})"
+            srcset="img/#{name}-lg.#{extension} 1x, img/#{name}-lg@2x.#{extension} 2x")
+        source(media="(min-width: #{md})"
+            srcset="img/#{name}-md.#{extension} 1x, img/#{name}-md@2x.#{extension} 2x")
+        img(src="img/#{name}-sm.#{extension}" 
+            srcset="img/#{name}-sm@2x.#{extension} 2x" width=width height=height 
+            alt=alt)

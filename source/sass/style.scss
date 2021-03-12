@@ -1,0 +1,27 @@
+// Normalize
+@import "global/normalize.scss";
+
+
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+
+
+// Global
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+
+
+// Components
+@import "../components/btn/btn.scss";
+@import "../components/icon/icon.scss";
+@import "../components/picture/picture.scss";
+@import "../components/form/form.scss";
+@import "../components/modal/modal.scss";
+@import "../components/wrapper.scss";
+
+
+// Page blocks
+@import "../components/block/block-main.scss";
+@import "global/no-js.scss";

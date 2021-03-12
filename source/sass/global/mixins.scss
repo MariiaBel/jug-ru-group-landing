@@ -1,0 +1,43 @@
+// generating media query:  @media (min-width: $breakpoint)
+@mixin media-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+
+@mixin resolution() {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
+
+@mixin bg-img($name, $repeat:no-repeat, $media-sizes...) {
+    background: url("../img/#{$name}-sm.png") $repeat;
+    background-size: contain;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        background: url("../img/#{$name}-sm@2x.png") $repeat;
+        background-size: contain;
+    }
+
+    @each $size in $media-sizes {
+        @include media-to("#{$size}") {
+            background: url("../img/#{$name}-#{$size}.png") $repeat;
+            background-size: contain;
+
+            @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+                background: url("../img/#{$name}-#{$size}@2x.png") $repeat;
+                background-size: contain;
+            }
+        }
+    }
+}

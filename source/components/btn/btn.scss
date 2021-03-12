@@ -1,0 +1,98 @@
+.btn {
+    border-radius: 12px;
+    padding: 14px;
+    border: 0;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+
+    &--accent {
+        background-color: map-get($colors, "accent");
+        color: map-get($colors, "contral");
+
+        &:hover {
+            background-color: map-get($colors, "accent-hover");
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 100%;
+            width: 34px;
+            height: 34px;
+
+            @include bg-img("emoji/welcome-man", no-repeat, "md");
+        }
+    }
+
+    &--black {
+        background-color: map-get($colors, "contral");
+        color: map-get($colors, "bg");
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 100%;
+            width: 28px;
+            height: 28px;
+
+            @include bg-img("emoji/tired-man", no-repeat, "md");
+        }
+    }
+
+    &--submit {
+        background: map-get($colors, "bg");
+        border: 1px solid map-get($colors, "grey-border");
+        border-radius: 7px;
+        padding: 12px;
+    }
+
+    &--light-white {
+        color: map-get($colors, "bg");
+        background: transparent;
+        border: 1px solid map-get($colors, "bg");
+        border-radius: 45px;
+        padding: 9px;
+    }
+}
+
+
+@include media-to("md") {
+    .btn {
+        &--black::before {
+            width: 44px;
+            height: 44px;
+        }
+
+        &--accent::before {
+            width: 53px;
+            height: 53px;
+        }
+
+        &--light-white {
+            padding: 15px;
+        }
+
+        &--submit {
+            padding: 15px 24px;
+        }
+    }
+}
+
+@include media-to("lg") {
+    .btn {
+        &--accent,
+        &--black {
+            padding-top: 22px;
+            padding-bottom: 22px;
+        }
+    }
+}

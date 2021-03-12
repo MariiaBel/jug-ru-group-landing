@@ -1,0 +1,12 @@
+section.modal#modal-accept
+    .wrapper
+        .modal__content
+            .modal__cart
+                h3.h2.icon.icon--accept.modal__title Я хочу знать когда будет офлайн
+                .modal__form
+                    include ../form/form.jade    
+                .modal__thank
+                    svg <use xlink:href = 'img/sprite.svg#ok-circle' />
+                    p Спасибо, что подписались на нашу рассылку!
+            a.icon.icon--arrow-left.modal__link-return(data-modal-close)(href="") Я кликнул просто посмотреть
+            include ../btn/btn-close.jade

@@ -1,0 +1,34 @@
+@use "sass:map";
+
+// Colors
+$colors: (
+    contral:        #000000,
+    bg:             #ffffff,
+    grey-field:     #f8f8f8,
+    grey-border:    #d7d7d7,
+    dim:            #aeaeae,
+    accent:         #fbcb03,
+    accent-hover:   #e6b901,
+);
+
+// Breakpoints
+$breakpoints: (
+    sm: 320px,
+    md: 768px,
+    lg: 1400px,
+);
+
+$wrapper: (
+    sm: 20px,
+    md: 60px,
+    lg: 80px,
+);
+
+
+// Typograthy
+$font: "Montserrat", "Arial", sans-serif;
+$font-size: (
+    sm: 12px,
+    md: 16px,
+    lg: 18px
+);

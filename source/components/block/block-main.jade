@@ -1,0 +1,15 @@
+section.block-main.wrapper
+    .block-main__img
+        .block-main__img-picture
+            +picture('7-conferences-in-one', 'png', 270, 231, '7 конференций в Jug Ru Group')
+    .block-main__content
+        a.block-main__content-logo(href="#")
+            +picture('jug-ru-group-logo', 'png', 111, 37, 'логотип JUG Ru Group')
+        h1.visually-hidden Конференции для программистов от JUG Ru Group 
+        h2.h1 Конференции, <span class="nowrap">которые нужны</span>
+        p Мы, JUG Ru Group, делаем крупнейшие конференции для программистов и сочувствующих.
+        p С нас — крутая программа, топовые спикеры, технические доклады без воды.
+        p С вас — готовность смотреть и общаться.
+    .block-main__btn-group
+        +btn('Купить билет ', 'btn--accent')(data-modal-open="accept")
+        +btn('Послать в жопу', 'btn--black')(data-modal-open="refuse")

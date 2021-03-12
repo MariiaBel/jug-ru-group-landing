@@ -1,0 +1,20 @@
+.wrapper {
+    padding-left: map-get($wrapper, "sm");
+    padding-right: map-get($wrapper, "sm");
+    margin: 0 auto;
+    max-width: map-get($breakpoints, "lg");
+}
+
+@include media-to("md") {
+    .wrapper {
+        padding-left: map-get($wrapper, "md");
+        padding-right: map-get($wrapper, "md");
+    }
+}
+
+@include media-to("lg") {
+    .wrapper {
+        padding-left: map-get($wrapper, "lg");
+        padding-right: map-get($wrapper, "lg");
+    }
+}
