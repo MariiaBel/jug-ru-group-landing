@@ -61,6 +61,11 @@
         border: 1px solid map-get($colors, "bg");
         border-radius: 45px;
         padding: 9px;
+
+        &:hover {
+            background-color: map-get($colors, "bg");
+            color: map-get($colors, "contral");
+        }
     }
 }
 
