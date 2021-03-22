@@ -2,7 +2,7 @@
 
 * Заказчик: "" 
 * Исполнитель: [Мария Белогубова](https://wwwpage.ru).
-
+* GitHub Pages: https://mariiabel.github.io/jug-ru-group-landing/build/
 ---
 
 **Папка с  исходными файлами — `source/`.**
